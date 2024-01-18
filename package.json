@@ -1,5 +1,5 @@
 {
-  "name": "react-date-range",
+  "name": "@ryolay/react-date-range",
   "version": "2.0.0-alpha.4",
   "description": "A React component for choosing dates and date ranges.",
   "main": "dist/index.js",
