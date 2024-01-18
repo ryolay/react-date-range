@@ -51,7 +51,16 @@ class Calendar extends PureComponent {
     };
   }
   getMonthNames() {
-    return [...Array(12).keys()].map(i => this.props.locale.localize.month(i));
+    //return [...Array(12).keys()].map(i => this.props.locale.localize.month(i));
+    const locale = this.props.locale || enUS; // Set a default locale if not provided
+    const monthNames = [];
+
+    for (let i = 0; i < 12; i++) {
+      const monthName = format(new Date(2000, i, 1), 'MMMM', { locale });
+      monthNames.push(monthName);
+    }
+
+    return monthNames;
   }
 
   calcScrollArea(props) {
